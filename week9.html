@@ -14,9 +14,7 @@
         //перспективна камера 
         var camera=new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 20000); 
         camera.position.z = 1000; 
-        
         var scene = new THREE.Scene(); 
-        
         var conegeometry = new THREE.CylinderGeometry(100,200,100,500); 
         var conematerial = new THREE.MeshLambertMaterial(); 
         var conemesh = new THREE.Mesh(conegeometry, conematerial); 
@@ -83,7 +81,6 @@
         }
 
         document.getElementById("Canvas").onclick = changeTarget; 
-
         function render() { 
             lightOne.position.y = 300*Math.sin(t);
             lightOne.position.z = 300*Math.cos(t);
@@ -97,7 +94,6 @@
             lightHelper.update();
             requestAnimationFrame(render); 
         } 
-
     </script> 
     </a-scene>
   </body> 
